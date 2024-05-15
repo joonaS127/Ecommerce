@@ -23,5 +23,13 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.transition-transform': {
+          transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
+        },
+      });
+    },
+  ],
 }
