@@ -1,0 +1,53 @@
+/* custom-styles.css */
+
+.navbar-custom {
+    background-color: white !important;
+    opacity: 0.9 !important;
+    z-index: 50 !important;
+  }
+
+.dropdown-custom {
+    background-color: white !important;
+    opacity: 0.9 !important;
+    z-index: 50 !important;
+}
+
+.text-white-custom {
+    color: white;  
+}
+
+.arrow-hover {
+    transition: transform 0.3s ease-in-out;
+}
+
+.arrow-hover:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    padding: 0 10px; /* Adjust the padding between images */
+  }
+  
+  .carousel-image-wrapper {
+    position: relative;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .carousel-title-wrapper {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 10px 0; /* Adjust the padding inside the white box */
+    box-sizing: border-box;
+  }
+  
+  .carousel-title {
+    margin: 0;
+    color: #333; /* Adjust the color as needed */
+  }
