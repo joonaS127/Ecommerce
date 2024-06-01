@@ -2,15 +2,32 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './custom-styles.css';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const images = [
-  { id: 1, src: '/pictures/Yucatan.jpg', title: 'Title 1' },
-  { id: 2, src: '/pictures/Yucatan.jpg', title: 'Title 2' },
-  { id: 3, src: '/pictures/Yucatan.jpg', title: 'Title 3' },
-  { id: 4, src: '/pictures/Yucatan.jpg', title: 'Title 4' },
-  { id: 5, src: '/pictures/Yucatan.jpg', title: 'Title 5' },
+  { id: 1, src: '/pictures/Yucatan.jpg', title: 'Yucatan' },
+  { id: 2, src: '/pictures/QRoo.jpg', title: 'Quintana Roo' },
+  { id: 3, src: '/pictures/Chiapas.jpg', title: 'Chiapas' },
+  { id: 4, src: '/pictures/Oaxaca.jpg', title: 'Oaxaca' },
+  { id: 5, src: '/pictures/Veracruz.jpg', title: 'Veracruz' },
   // Add more images as needed
 ];
+
+const CustomLeftArrow = ({ onClick }) => {
+    return (
+      <div className="custom-arrow custom-arrow-left" onClick={onClick}>
+        <IoIosArrowBack size={24} />
+      </div>
+    );
+  };
+  
+  const CustomRightArrow = ({ onClick }) => {
+    return (
+      <div className="custom-arrow custom-arrow-right" onClick={onClick}>
+        <IoIosArrowForward size={24} />
+      </div>
+    );
+  };
 
 const Destinations = () => {
     const responsive = {
@@ -38,6 +55,10 @@ const Destinations = () => {
         infinite={true}
         containerClass="carousel-container"
         itemClass="carousel-item"
+        autoPlay={true}
+        autoPlaySpeed={5000}
+        customLeftArrow={<CustomLeftArrow />}
+        customRightArrow={<CustomRightArrow />}
       >
         {images.map((image) => (
           <div key={image.id} className="carousel-image-wrapper">
